@@ -1,0 +1,23 @@
+h2{
+    font-size: 15px;
+    color: rgb(254, 1, 136);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button{
+    background-color: aquamarine;
+    
+}
+#list-barang {
+    padding-left: -200px;
+      width: 20em;
+  height: 5em;
+  border: 3px inset rgb(158, 11, 85);
+  margin-bottom: 1em;
+  background-color: rgb(5, 197, 245);
+  color: rgb(33, 46, 100);
+}
+
+body{
+    background-image: "th.jpg";
+}

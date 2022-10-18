@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Salary and Budget</title>
+<script type='text/javascript'>
+        function funCalculate() {
+        var sales = document.getElementById("sales").value;
+
+        var commission = parseFloat(sales)*(6/100);
+        var txtcommision = document.getElementById('commission');
+        txtcommision.value=commission.toFixed(2);
+
+        var grosspay = 900 + parseFloat(commission);
+        var txtgrosspay = document.getElementById('grosspay');
+        txtgrosspay.value=grosspay.toFixed(2);
+
+        var deduction = parseFloat(grosspay)*(18/100);
+        var txtdeduction = document.getElementById('deduction');
+        txtdeduction.value=deduction.toFixed(2);
+
+        var txtnetpay = document.getElementById('netpay');
+        txtnetpay.value=netpay.toFixed(2);
+    
+        var housing = parseFloat(netpay)*(45/100);
+        var txthousing = document.getElementById('housing');
+        txthousing.value=housing.toFixed(2);
+     
+
+        var food = parseFloat(netpay)*(20/100);
+        var txtfood = document.getElementById('food');
+        txtfood.value=food.toFixed(2);
+       
+
+        var entertainment = parseFloat(netpay)*(25/100);
+        var txtentertainment = document.getElementById('entertainment');
+        txtentertainment.value=entertainment.toFixed(2);
+        
+        var miscellaneous = parseFloat(netpay)*(10/100);
+        var txtmiscellaneouse = document.getElementById('miscellaneous');
+        txtmiscellaneouse.value=miscellaneous.toFixed(2);
+        }
+        </script>
+
+
+<!-- style tag for css -->
+        <style>
+        #container{
+        width:620px;
+        padding:20px;
+        margin:auto;
+        }
+        #content{
+        width:600px;
+        padding:20px;
+        margin:auto;
+        border-style: double;
+        border-color: rgb(159, 255, 80);
+        }
+        </style>
+</head>
+        <div id='container'>
+        <h1>Salary and Budget</h1>
+        <div id='content'>
+        <form name='sal' method='POST' action='#'>
+        <table>
+        <tr> <td>Name</td> <td><input type='text' name='uname' value='' /></td></tr>
+        <tr> <td>Sales</td> <td><input type='text' id='sales' name='sales' value='' /></td></tr>
+        <tr> <td>&nbsp;</td> <td></td></tr>
+        <tr>
+        <td>Commission</td> <td><input type='text' readonly="true" id='commission' name='commission' value=''
+        /></td>
+        <td>Housing and Utilities</td> <td><input type='text' readonly="true" id='housing' name='housing'
+        value='' /></td>
+        </tr>
+        <tr>
+        <td>Gross Pay</td> <td><input type='text' readonly="true" id='grosspay' name='grosspay' value='' />
+        </td>
+        <td>Food & Clothing</td> <td><input type='text' readonly="true" id='food' name='food' value='' /></td>
+        </tr>
+        <tr>
+        <td>Deduction</td> <td><input type='text' readonly="true" id='deduction' name='deduction' value='' />
+        </td>
+        <td>Entertainment</td> <td><input type='text' readonly="true" id='entertainment' name='entertainment'
+        value='' /></td>
+        </tr>
+        <tr>
+        <td>Net Pay</td> <td><input type='text' readonly="true" id='netpay' name='netpay' value='' /></td>
+        <td>Miscellaneous</td> <td><input type='text' readonly="true" id='miscellaneous' name='miscellaneous'
+        value='' /></td>
+        </tr>
+    
+        <tr> <td></td><td style='text-align:center;'><input type='button' value='Calculate' onclick="funCalculate()" name='submit' /></td><td></td> <td style='text-align:center;'><input type='reset' name='reset'
+        value='Clear' /></td></tr>
+        </table>
+</form>
+</div> 
+</div> 
+</html>
